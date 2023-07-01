@@ -13,7 +13,9 @@
     <% @users.each do |user| %>
       <%= render(Table::RowComponent.new(id: user.id)) do %>
         <%= render(Table::CellComponent.new) do %>
-          <%= render(Button::ClipboardComponent.new) { user.email } %>
+          <%= render(Button::ClipboardComponent.new) do %>
+            <div><%= user.email %></div>
+          <% end %>
         <% end %>
         <%= render(Table::CellComponent.new(cell_value: user.name)) %>
         <%= render(Table::CellComponent.new(cell_value: user.birthday.iso8601)) %>

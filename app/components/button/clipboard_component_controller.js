@@ -2,8 +2,9 @@ import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   static targets = ['source']
-  connect() {
-    console.log("Hello, Stimulus!", this.element);
+
+  initialize() {
+    this.element.firstElementChild.setAttribute('data-button--clipboard-component-target', 'source')
   }
   copy(event) {
     event.preventDefault()
