@@ -1,0 +1,47 @@
+<%= render(Table::TableComponent.new) do %>
+  <%= render(Table::HeaderComponent.new) do %>
+    <%= render(Table::HeadComponent.new(head_name: 'Email', type: 'email')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Name', type: 'name')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Birthday', type: 'birthday')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Phone', type: 'phone')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Balance', type: 'balance')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Role', type: 'role')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Confirm Code', type: 'confirm_code')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Last Active At', type: 'last_active_at')) %>
+  <% end %>
+  <%= render(Table::BodyComponent.new) do %>
+    <% @users.each do |user| %>
+      <%= render(Table::RowComponent.new(id: user.id)) do %>
+        <%= render(Table::CellComponent.new) do %>
+          <%= render(Button::ClipboardComponent.new) { user.email } %>
+        <% end %>
+        <%= render(Table::CellComponent.new(cell_value: user.name)) %>
+        <%= render(Table::CellComponent.new(cell_value: user.birthday.iso8601)) %>
+        <%= render(Table::CellComponent.new(cell_value: user.phone)) %>
+        <%= render(Table::CellComponent.new(cell_value: user.balance)) %>
+        <%= render(Table::CellComponent.new(cell_value: user.role)) %>
+        <%= render(Table::CellComponent.new(cell_value: user.confirm_code)) %>
+        <%= render(Table::CellComponent.new(cell_value: user.last_active_at.iso8601)) %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
+
+
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Users</h1>
+    <%= link_to 'New user', new_user_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="users" class="min-w-full">
+    <%= render @users %>
+  </div>
+</div>
