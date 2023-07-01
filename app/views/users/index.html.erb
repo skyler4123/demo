@@ -1,3 +1,7 @@
+<%= render(Button::ClipboardComponent.new) do %>
+  <input type='text'>
+<% end %>
+
 <%= render(Table::TableComponent.new) do %>
   <%= render(Table::HeaderComponent.new) do %>
     <%= render(Table::HeadComponent.new(head_name: 'Email', type: 'email')) %>
