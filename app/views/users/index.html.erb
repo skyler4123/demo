@@ -14,14 +14,14 @@
 
 <%= render(Table::TableComponent.new) do %>
   <%= render(Table::HeaderComponent.new) do %>
-    <%= render(Table::HeadComponent.new(head_name: 'Email', type: 'email')) %>
-    <%= render(Table::HeadComponent.new(head_name: 'Name', type: 'name')) %>
-    <%= render(Table::HeadComponent.new(head_name: 'Birthday', type: 'birthday')) %>
-    <%= render(Table::HeadComponent.new(head_name: 'Phone', type: 'phone')) %>
-    <%= render(Table::HeadComponent.new(head_name: 'Balance', type: 'balance')) %>
-    <%= render(Table::HeadComponent.new(head_name: 'Role', type: 'role')) %>
-    <%= render(Table::HeadComponent.new(head_name: 'Confirm Code', type: 'confirm_code')) %>
-    <%= render(Table::HeadComponent.new(head_name: 'Last Active At', type: 'last_active_at')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Email')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Name')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Birthday')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Phone')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Balance')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Role')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Confirm Code')) %>
+    <%= render(Table::HeadComponent.new(head_name: 'Last Active At', type: 'last_online')) %>
   <% end %>
   <%= render(Table::BodyComponent.new) do %>
     <% @users.each do |user| %>
