@@ -12,6 +12,8 @@
 <% end %>
 
 
+<%= render(RichText::TinymceComponent.new) %>
+
 <%= render(Table::TableComponent.new) do %>
   <%= render(Table::HeaderComponent.new) do %>
     <%= render(Table::HeadComponent.new(head_name: 'Email')) %>

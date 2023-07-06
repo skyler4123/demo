@@ -1,0 +1,5 @@
+<div data-controller="rich-text--trix-component" class='<%= @editor_class || 'w-3/4' %>'>
+  <input id="<%= @id + '-' + rand(100000..999999).to_s %>" type="hidden" name="<%= @name %>">
+  <trix-editor input="<%= @id %>"></trix-editor>
+  <%= content %>
+</div>
