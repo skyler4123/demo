@@ -5,14 +5,12 @@
 </div>
 
 <%= render(Dropdown::DropdownComponent.new(header: 'Test Dropdownnnnnnn')) do %>
-  <li><%= link_to "LInk 1", '#' %></li>
-  <li class="hover:text-red-500"><%= link_to "LInk 21111111111111111111111", '#' %></li>
-  <li><%= link_to "LInk 3", '#' %></li>
-  <li><%= link_to "LInk 4", '#' %></li>
+  <li class='hover:bg-indigo-400'><%= link_to "LInk 1", '#' %></li>
+  <li class='hover:bg-indigo-400'><%= link_to "LInk 21111111111111111111111", '#' %></li>
+  <li class='hover:bg-indigo-400'><%= link_to "LInk 3", '#' %></li>
+  <li class='hover:bg-indigo-400'><%= link_to "LInk 4", '#' %></li>
 <% end %>
 
-
-<%= render(RichText::TinymceComponent.new) %>
 
 <%= render(Table::TableComponent.new) do %>
   <%= render(Table::HeaderComponent.new) do %>

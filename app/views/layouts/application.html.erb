@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir='ltr'>
   <head>
     <title>Demo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,7 +14,21 @@
 
   <body>
     <main>
-      <%= yield %>
+      <div dir='ltr' class="group flex items-center">
+          <p class="text-sm font-medium text-slate-700 group-hover:text-slate-900">aaaaaaa</p>
+        <div class="ltr:ml-3 rtl:mr-3">
+          <p class="text-sm font-medium text-slate-700 group-hover:text-slate-900">bbbbbbbbbbbb</p>
+          <p class="text-sm font-medium text-slate-500 group-hover:text-slate-700">cccccccccc</p>
+        </div>
+      </div>
+
+      <div dir='rtl' class="group flex items-center">
+        <p class="text-sm font-medium text-slate-700 group-hover:text-slate-900">aaaaaaa</p>
+        <div class="ltr:ml-5 rtl:mr-5 rtl:p-10">
+          <p class="text-sm font-medium text-slate-700 group-hover:text-slate-900">bbbbbbbbbbbb</p>
+          <p class="text-sm font-medium text-slate-500 group-hover:text-slate-700">cccccccccc</p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
