@@ -1,3 +1,6 @@
-<div data-controller="modal--modal-component" class='min-h-screen'>
-
+<div
+  data-controller="modal--modal-component"
+  data-action="click->modal--modal-component#close"
+  class='<%= @klass || "fixed inset-0 z-50 h-screen w-screen flex justify-center items-center bg-slate-400 opacity-50 cursor-pointer hidden" %>'>
+  <%= content %>
 </div>
