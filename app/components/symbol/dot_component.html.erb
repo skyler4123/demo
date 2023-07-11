@@ -1,0 +1,23 @@
+<%# <div data-controller="symbol--dot-component"> %>
+  <% case @color %>
+  <% when 'green' %>
+    <span class="inline-block w-3 h-3 just bg-green-500 rounded-full"><%= @number %></span>
+  <% when 'white' %>
+    <span class="inline-block w-3 h-3 bg-gray-200 rounded-full"><%= @number %></span>
+  <% when 'gray' %>
+    <span class="inline-block w-3 h-3 bg-gray-900 rounded-full dark:bg-gray-700"><%= @number %></span>
+  <% when 'blue' %>
+    <span class="inline-block w-3 h-3 bg-blue-600 rounded-full"><%= @number %></span>
+  <% when 'red' %>
+    <span class="inline-block w-3 h-3 bg-red-500 rounded-full"><%= @number %></span>
+  <% when 'purple' %>
+    <span class="inline-block w-3 h-3 bg-purple-500 rounded-full"><%= @number %></span>
+  <% when 'indigo' %>
+    <span class="inline-block w-3 h-3 bg-indigo-500 rounded-full"><%= @number %></span>
+  <% when 'yellow' %>
+    <span class="inline-block w-3 h-3 bg-yellow-300 rounded-full"><%= @number %></span>
+  <% when 'teal' %>
+    <span class="inline-block w-3 h-3 bg-teal-500 rounded-full"><%= @number %></span>
+  <% end %>
+  <%= content %>
+<%# </div> %>
