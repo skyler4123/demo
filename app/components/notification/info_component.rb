@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Notification::InfoComponent < ViewComponent::Base
-  def initialize(closeable: nil)
-    @closeable = closeable
-  end
+  renders_one :header
+  renders_one :footer
 end
