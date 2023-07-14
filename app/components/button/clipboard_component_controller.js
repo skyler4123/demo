@@ -1,23 +1,25 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ['source']
   static values = {
-    sourceNodeName: String
+    sourceElementName: String
   }
 
   initialize() {
-    this.element.firstElementChild.setAttribute('data-button--clipboard-component-target', 'source')
-    this.sourceNodeName = this.element.firstElementChild.nodeName
+    console.log(this.sourceElement())
+    this.sourceElementName = this.sourceElement().nodeName
+  }
+  sourceElement() {
+    this.element.previousElementSibling
   }
   copy(event) {
     event.preventDefault()
-    switch (this.sourceNodeName) {
+    switch (this.sourceElementName) {
       case "INPUT":
-        navigator.clipboard.writeText(this.sourceTarget.value);
+        navigator.clipboard.writeText(this.sourceElement().value);
         break;
       default:
-        navigator.clipboard.writeText(this.sourceTarget.innerText);
+        navigator.clipboard.writeText(this.sourceElement().innerText);
         break;
     }
   }

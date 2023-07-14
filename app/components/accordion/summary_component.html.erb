@@ -1,0 +1,27 @@
+<details data-controller="accordion--summary-component" class="group">
+  <%= header if header? %>
+
+  <% if summary? %>
+    <%= summary %>
+  <% else %>
+    <summary class="list-none">
+      <div class="cursor-pointer flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-900 rounded-t-xl focus:ring-4 focus:ring-blue-200 hover:bg-blue-100 group-open:bg-blue-100 group-open:text-sky-600">
+        <%= @text %>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden group-open:inline-block">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-open:hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+    </summary>
+  <% end %>
+
+  <% if content? %>
+    <%= content %>
+  <% else %>
+    <%= render(Accordion::BodyComponent.new) %>
+  <% end %>
+
+  <%= footer if footer? %>
+</details>

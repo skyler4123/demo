@@ -1,14 +1,14 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  connect() {
+
+  initialize() {
+    // console.log(this.parent())
   }
-  open() {
-    this.element.classList.remove('hidden');
+  parent() {
+    return this.element.parentNode.closest('[data-controller]')
   }
   close() {
-    console.log("CLOSINGGGGGGGGGGGG")
-    console.log(this.element)
-    this.element.classList.toggle('hidden');
+    this.parent().removeAttribute('open')
   }
 }

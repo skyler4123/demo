@@ -1,0 +1,11 @@
+<div data-controller="accordion--body-component" class="border border-t-0 border-gray-900">
+  <%= header if header? %>
+
+  <% if content? %>
+    <%= content %>
+  <% else %>
+    <%= @text %>
+  <% end %>
+
+  <%= footer if footer? %>
+</div>

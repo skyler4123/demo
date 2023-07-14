@@ -1,1 +1,16 @@
-<%= render(Notification::WarningComponent.new) %>
+ <div class="">HAHAHAHHAHA</div>
+<%= render(Button::ButtonComponent.new(label: "SKYLER!!!")) do |button| %>
+  <%= button.with_header do %>
+    <span>QQQQQ</span>
+  <% end %>
+  <%= button.with_footer do %>
+    <span>WWWWWWWWW</span>
+  <% end %>
+  <%= button.with_modal do %>
+    <%= render(Modal::ModalComponent.new) do %>
+      <div>HEHEHEHEHEHEHEHEH</div>
+      <%= render(Button::ClipboardComponent.new) %>
+    <% end %>
+  <% end %>
+<% end %>
+<div class="">HAHAHAHHAHA</div>
