@@ -3,6 +3,8 @@
 class Button::ButtonComponent < ViewComponent::Base
   renders_one :header
   renders_one :footer
+  renders_one :click
+  renders_one :hover
   renders_one :modal
   def initialize(
       label: 'Enter',
