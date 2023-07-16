@@ -21,5 +21,11 @@
   <% end %>
 <% end %>
 
-
+<%= render(Toast::ToastComponent.new) do %>
+  <div>Content for TOAST</div>
+  <div>Content for TOAST</div>
+  <div>Content for TOAST</div>
+  <div>Content for TOAST</div>
+  <%= render(Button::CloseComponent.new) %>
+<% end %>
 
