@@ -1,31 +1,13 @@
-<%= render(Tab::TabComponent.new) do %>
-  <%= render(Tab::HeaderComponent.new) do %>
-    <%= render(Tab::HeadComponent.new(label: 'Label1')) %>
-    <%= render(Tab::HeadComponent.new(label: 'Label2')) %>
-    <%= render(Tab::HeadComponent.new(label: 'Label3')) %>
-    <%= render(Tab::HeadComponent.new(label: 'Label4')) %>
-  <% end %>
-  <%= render(Tab::ContentsComponent.new) do %>
-    <%= render(Tab::ContentComponent.new) do %>
-      <div>Content 1</div>
-    <% end %>
-    <%= render(Tab::ContentComponent.new) do %>
-      <div>Content 2</div>
-    <% end %>
-    <%= render(Tab::ContentComponent.new) do %>
-      <div>Content 3</div>
-    <% end %>
-    <%= render(Tab::ContentComponent.new) do %>
-      <div>Content 4</div>
-    <% end %>
-  <% end %>
-<% end %>
+<div>k hkl kjjlkjl klklkj </div>
+<%= render(Button::CopyComponent.new) %>
+<%= render(Avatar::AvatarComponent.new) %>
 
-<%= render(Toast::ToastComponent.new) do %>
-  <div>Content for TOAST</div>
-  <div>Content for TOAST</div>
-  <div>Content for TOAST</div>
-  <div>Content for TOAST</div>
-  <%= render(Button::CloseComponent.new) %>
+<%= render(Body::HeaderComponent.new) do %>
+  <%= render(Body::NavComponent.new) %>
 <% end %>
-
+<%= render(Body::BodyComponent.new) do %>
+  <%= render(Main::LeftSidebarComponent.new) %>
+  <%= render(Main::ContentComponent.new) %>
+  <%= render(Main::RightComponent.new) %>
+<% end %>
+<%= render(Body::FooterComponent.new) %>

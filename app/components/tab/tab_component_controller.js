@@ -10,9 +10,10 @@ export default class extends Controller {
   }
   openContent(event) {
     this.contentTargets[this.currentIndexValue].classList.add('hidden')
+    this.headTargets[this.currentIndexValue].querySelector('details').removeAttribute('open')
     const currentHead = event.target.closest('[data-controller]')
     this.currentIndexValue = this.headTargets.indexOf(currentHead)
-    this.headTargets.filter(head => head != currentHead).forEach(head => head.querySelector('details').removeAttribute('open'))
+    // this.headTargets.filter(head => head != currentHead).forEach(head => head.querySelector('details').removeAttribute('open'))
     this.contentTargets[this.currentIndexValue].classList.remove('hidden')
   }
 }
