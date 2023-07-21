@@ -1,1 +1,5 @@
-<div data-controller="button--link-component">Add Button::Link template here</div>
+ <details class="inline group" data-controller="button--link-component">
+  <summary class="list-none text-black dark:text-white font-medium text-lg text-center active:scale-95 duration-100">
+    <%= link_to @label, @url, class: @link_class %>
+  </summary>
+</details> 
