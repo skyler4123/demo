@@ -14,15 +14,23 @@
 
 <%= render(Body::BodyComponent.new) do %>
   <%= render(Body::HeaderComponent.new) do %>
-    <%= render(Body::NavComponent.new) %>
+    <%= render(Body::NavComponent.new) do %>
+      <div class='bg-slate-500'>nav</div>
+    <% end %>
   <% end %>
   <%= render(Main::MainComponent.new) do %>
-    <%= render(Main::LeftSidebarComponent.new) %>
+    <%= render(Main::LeftSidebarComponent.new) do %>
+      <div class="bg-green-500">left sidebar</div>
+    <% end %>
     <%= render(Main::ContentComponent.new) do %>
       <%= yield %>
     <% end %>
-    <%= render(Main::RightSidebarComponent.new) %>
+    <%= render(Main::RightSidebarComponent.new) do %>
+      <div class="bg-violet-600">right sidebar</div>
+    <% end %>
   <% end %>
-  <%= render(Body::FooterComponent.new) %>
+  <%= render(Body::FooterComponent.new) do %>
+    <div class="bg-yellow-400">footer</div>
+  <% end %>
 <% end %>
 </html>
