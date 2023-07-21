@@ -12,9 +12,17 @@
   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
   </head>
 
-  <body>
-    <main>
+<%= render(Body::BodyComponent.new) do %>
+  <%= render(Body::HeaderComponent.new) do %>
+    <%= render(Body::NavComponent.new) %>
+  <% end %>
+  <%= render(Main::MainComponent.new) do %>
+    <%= render(Main::LeftSidebarComponent.new) %>
+    <%= render(Main::ContentComponent.new) do %>
       <%= yield %>
-    </main>
-  </body>
+    <% end %>
+    <%= render(Main::RightSidebarComponent.new) %>
+  <% end %>
+  <%= render(Body::FooterComponent.new) %>
+<% end %>
 </html>
