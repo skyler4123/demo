@@ -66,4 +66,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "kamal", "1.8.3"
+gem "kamal"
+gem 'faker'
